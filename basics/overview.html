@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Overview | JS-Docs</title>
+        <meta name="generator" content="GravCMS" />
+    <meta name="description" content="RTFM Skeleton" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <link rel="alternate" type="application/atom+xml" href="../feed:atom.html" title="Atom Feed" />
+    <link rel="alternate" type="application/rss+xml" href="../feed:rss.html" title="RSS Feed" />
+    <link rel="icon" type="image/png" href="../user/themes/learn2/images/favicon.png">
+
+                                            
+            
+                                                        
+        <link href="../user/themes/learn2/css-compiled/nucleus.css" type="text/css" rel="stylesheet">
+<link href="../user/themes/learn2/css-compiled/theme.css" type="text/css" rel="stylesheet">
+<link href="../user/themes/learn2/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+<link href="../user/plugins/markdown-notices/assets/notices.css" type="text/css" rel="stylesheet">
+<link href="../user/plugins/breadcrumbs/css/breadcrumbs.css" type="text/css" rel="stylesheet">
+<link href="../user/plugins/highlight/css/learn.css" type="text/css" rel="stylesheet">
+<link href="../user/plugins/prism-highlight/css/prism.css" type="text/css" rel="stylesheet">
+<link href="../user/themes/learn2/css/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <script src="../system/assets/jquery/jquery-3.x.min.js"></script>
+<script src="../user/themes/learn2/js/modernizr.custom.71422.js"></script>
+<script src="../user/plugins/anchors/js/anchor.min.js"></script>
+<script src="../user/plugins/highlight/js/highlight.pack.js"></script>
+<script src="../user/themes/learn2/js/featherlight.min.js"></script>
+<script src="../user/themes/learn2/js/clipboard.min.js"></script>
+<script src="../user/themes/learn2/js/jquery.scrollbar.min.js"></script>
+<script src="../user/themes/learn2/js/learn.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+                    anchors.options = {
+                        visible: 'hover',
+                        placement: 'right',
+                        
+                        
+                        truncate: 64
+                    };
+                    anchors.add('#body h2, #body h3, #body h4, #body h5');
+                });
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+
+  
+</head>
+<body class="searchbox-hidden " data-url="/basics/overview">
+        <nav id="sidebar">
+        <div id="header-wrapper">
+            <div id="header">
+                <a id="logo" href="http://127.0.0.1/js-docs"><!--
+<svg id="logo-svg" viewBox="0 0 444 102" style="background-color:#ffffff00" version="1.1"
+	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+	x="0px" y="0px" width="444px" height="80px"
+>
+	<path d="m87.503 53.977h-10.642c-1.616 0-2.93 1.315-2.93 2.936v20.418l-0.21 0.175c-6.263 5.278-14.182 8.18-22.297 8.18-19.144 0-34.719-15.559-34.719-34.685 0-19.128 15.575-34.684 34.719-34.684 7.444 0 14.562 2.353 20.587 6.811 1.169 0.865 2.792 0.746 3.822-0.28l7.588-7.58c0.592-0.588 0.901-1.406 0.853-2.24-0.046-0.834-0.448-1.607-1.104-2.127-9.016-7.1443-20.29-11.076-31.746-11.076-28.246 0.0001-51.228 22.958-51.228 51.176-0.0005 28.219 22.982 51.179 51.228 51.179 14.584 0 28.534-6.273 38.27-17.208 0.479-0.536 0.742-1.227 0.742-1.945v-26.114c0-1.621-1.314-2.936-2.933-2.936z"/>
+	<path d="m443.52 4.529c-0.54-0.8206-1.47-1.3182-2.45-1.3182h-11.58c-1.17 0-2.23 0.6957-2.7 1.7704l-32.65 75.721-33.23-75.738c-0.47-1.0634-1.52-1.7532-2.68-1.7532h-11.62c-1 0-1.92 0.4976-2.46 1.3265-0.55 0.8288-0.64 1.8753-0.23 2.7832l40.25 91.732c0.47 1.068 1.53 1.758 2.69 1.758h14.66c1.17 0 2.23-0.71 2.7-1.775l39.54-91.734c0.39-0.9055 0.3-1.9466-0.24-2.772z"/>
+	<path d="m291.34 4.9642c-0.47-1.0636-1.52-1.7534-2.69-1.7534h-14.65c-1.17 0-2.23 0.6957-2.7 1.7704l-39.54 91.735c-0.39 0.9-0.3 1.946 0.24 2.766 0.54 0.828 1.46 1.328 2.45 1.328h11.58c1.17 0 2.23-0.71 2.7-1.775l32.64-75.723 33.24 75.74c0.47 1.068 1.52 1.758 2.68 1.758h11.63c0.99 0 1.92-0.5 2.45-1.328 0.55-0.831 0.63-1.878 0.24-2.788l-40.27-91.73z"/>
+	<path d="m185.34 67.248l0.64-0.306c11.56-5.583 19.04-17.434 19.04-30.196 0-18.491-15.06-33.535-33.58-33.535l-42.49-0.0002c-1.62 0-2.93 1.3153-2.93 2.933v91.726c0 1.624 1.31 2.94 2.93 2.94h10.64c1.62 0 2.94-1.316 2.94-2.94v-78.17h28.91c9.42 0 17.07 7.645 17.07 17.046 0 7.84-5.33 14.64-12.97 16.53-1.38 0.348-2.75 0.523-4.1 0.523h-10.64c-1.1 0-2.11 0.622-2.61 1.607-0.5 0.984-0.4 2.164 0.25 3.057l30.17 41.143c0.55 0.754 1.43 1.204 2.36 1.204h13.22c1.11 0 2.12-0.63 2.62-1.611 0.5-0.989 0.4-2.172-0.25-3.06l-21.22-28.891z"/>
+</svg>
+-->
+<img src="../user/themes/learn2/images/custom/logo.png"></a>
+                <div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input id="search-by" type="text" placeholder="Search Documentation"
+           data-search-input="/js-docs/search.json/query"/>
+    <span data-search-clear><i class="fa fa-close"></i></span>
+</div>
+            </div>
+        </div>
+        
+
+
+<div class="scrollbar-inner">
+    <div class="highlightable">
+                    <ul class="topics">
+                                
+                                            <li class="dd-item parent" data-nav-id="/">
+            <a href="../index.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>1. </b>Basics</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item active" data-nav-id="/basics/overview">
+            <a href="overview.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Overview</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item" data-nav-id="/themes">
+            <a href="../themes.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>2. </b>Themes</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/themes/quark">
+            <a href="../themes/quark.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Quark</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/themes/quark/typography">
+            <a href="../themes/quark/typography.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Typography</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item" data-nav-id="/themes/canvas">
+            <a href="../themes/canvas.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Canvas</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item" data-nav-id="/tutorials">
+            <a href="../tutorials.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>3. </b>Tutorials</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/tutorials/gantry ">
+            <a href="../tutorials/gantry&#32;.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Gantry</span>
+            </a>
+                    </li>
+                            <li class="dd-item" data-nav-id="/tutorials/joomla">
+            <a href="../tutorials/joomla.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Joomla</span>
+            </a>
+                    </li>
+                            <li class="dd-item" data-nav-id="/tutorials/lamp">
+            <a href="../tutorials/lamp.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>LAMP Stack</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item" data-nav-id="/apps">
+            <a href="../apps.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>4. </b>Apps</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/apps/flatpak">
+            <a href="../apps/flatpak.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Flatpak</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+    
+                            </ul>
+                <hr />
+
+        <a class="padding" href="overview.html#" data-clear-history-toggle><i
+                    class="fa fa-fw fa-history"></i> Clear History</a><br/>
+
+        <section id="footer">
+            <p>Built with <a href="http://getgrav.org">Grav</a> - The Modern Flat File CMS</p>
+        </section>
+    </div>
+</div>
+    </nav>
+    
+        <section id="body">
+        <div id="overlay"></div>
+
+        <div class="padding highlightable">
+            <a href="overview.html#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
+
+                        <div id="top-bar">
+                
+                                
+<div id="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                    <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="../index.html" itemid="/js-docs/">
+                    <span itemprop="name">Basics</span>
+                </a>
+                        <i class="fa fa-angle-right"></i>
+                <meta itemprop="position" content="1" />
+    </span>
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                    <span itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/js-docs/basics/overview">
+                    <span itemprop="name">Overview</span>
+                </span>
+                            <meta itemprop="position" content="2" />
+    </span>
+    </div>
+                            </div>
+            
+                <div id="body-inner">
+    <h1>Overview</h1>
+    <p>
+    	<p>Let's face it: Writing content for the Web is tiresome. WYSIWYG editors help alleviate this task, but they generally result in horrible code, or worse yet, ugly web pages.</p>
+<p><strong>Markdown</strong> is a better way to write <strong>HTML</strong>, without all the complexities and ugliness that usually accompanies it.</p>
+<p>Some of the key benefits are:</p>
+<ol>
+<li>Markdown is simple to learn, with minimal extra characters so it's also quicker to write content.</li>
+<li>Less chance of errors when writing in markdown.</li>
+<li>Produces valid XHTML output.</li>
+<li>Keeps the content and the visual display separate, so you cannot mess up the look of your site.</li>
+<li>Write in any text editor or Markdown application you like.</li>
+<li>Markdown is a joy to use!</li>
+</ol>
+<p>John Gruber, the author of Markdown, puts it like this:</p>
+<blockquote>
+<p>The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. While Markdown’s syntax has been influenced by several existing text-to-HTML filters, the single biggest source of inspiration for Markdown’s syntax is the format of plain text email.
+-- <cite>John Gruber</cite></p>
+</blockquote>
+<p>Grav ships with built-in support for <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and <a href="https://michelf.ca/projects/php-markdown/extra/">Markdown Extra</a>. You must enable <strong>Markdown Extra</strong> in your <code>system.yaml</code> configuration file</p>
+<p>Without further delay, let us go over the main elements of Markdown and what the resulting HTML looks like:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><i class="fa fa-bookmark"></i> Bookmark this page for easy future reference!</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2>Headings</h2>
+<p>Headings from <code>h1</code> through <code>h6</code> are constructed with a <code>#</code> for each level:</p>
+<pre><code class="language-markdown"># h1 Heading
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading</code></pre>
+<p>Renders to:</p>
+<h1>h1 Heading</h1>
+<h2>h2 Heading</h2>
+<h3>h3 Heading</h3>
+<h4>h4 Heading</h4>
+<h5>h5 Heading</h5>
+<h6>h6 Heading</h6>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;h1&gt;h1 Heading&lt;/h1&gt;
+&lt;h2&gt;h2 Heading&lt;/h2&gt;
+&lt;h3&gt;h3 Heading&lt;/h3&gt;
+&lt;h4&gt;h4 Heading&lt;/h4&gt;
+&lt;h5&gt;h5 Heading&lt;/h5&gt;
+&lt;h6&gt;h6 Heading&lt;/h6&gt;</code></pre>
+<p><br>
+<br>
+<br></p>
+<h2>Comments</h2>
+<p>Comments should be HTML compatible</p>
+<pre><code class="language-html">&lt;!--
+This is a comment
+--&gt;</code></pre>
+<p>Comment below should <strong>NOT</strong> be seen:</p>
+<!--
+This is a comment
+-->
+<p><br>
+<br>
+<br></p>
+<h2>Horizontal Rules</h2>
+<p>The HTML <code>&lt;hr&gt;</code> element is for creating a "thematic break" between paragraph-level elements. In markdown, you can create a <code>&lt;hr&gt;</code> with any of the following:</p>
+<ul>
+<li><code>___</code>: three consecutive underscores</li>
+<li><code>---</code>: three consecutive dashes</li>
+<li><code>***</code>: three consecutive asterisks</li>
+</ul>
+<p>renders to:</p>
+<hr />
+<hr />
+<hr />
+<p><br>
+<br>
+<br></p>
+<h2>Body Copy</h2>
+<p>Body copy written as normal, plain text will be wrapped with <code>&lt;p&gt;&lt;/p&gt;</code> tags in the rendered HTML.</p>
+<p>So this body copy:</p>
+<pre><code class="language-markdown">Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.</code></pre>
+<p>renders to this HTML:</p>
+<pre><code class="language-html">&lt;p&gt;Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.&lt;/p&gt;</code></pre>
+<p><br>
+<br>
+<br></p>
+<h2>Emphasis</h2>
+<h3>Bold</h3>
+<p>For emphasizing a snippet of text with a heavier font-weight.</p>
+<p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+<pre><code class="language-markdown">**rendered as bold text**</code></pre>
+<p>renders to:</p>
+<p><strong>rendered as bold text</strong></p>
+<p>and this HTML</p>
+<pre><code class="language-html">&lt;strong&gt;rendered as bold text&lt;/strong&gt;</code></pre>
+<h3>Italics</h3>
+<p>For emphasizing a snippet of text with italics.</p>
+<p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+<pre><code class="language-markdown">_rendered as italicized text_</code></pre>
+<p>renders to:</p>
+<p><em>rendered as italicized text</em></p>
+<p>and this HTML:</p>
+<pre><code class="language-html">&lt;em&gt;rendered as italicized text&lt;/em&gt;</code></pre>
+<h3>strikethrough</h3>
+<p>In GFM (GitHub flavored Markdown) you can do strikethroughs.</p>
+<pre><code class="language-markdown">~~Strike through this text.~~</code></pre>
+<p>Which renders to:</p>
+<p><del>Strike through this text.</del></p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;del&gt;Strike through this text.&lt;/del&gt;</code></pre>
+<p><br>
+<br>
+<br></p>
+<h2>Blockquotes</h2>
+<p>For quoting blocks of content from another source within your document.</p>
+<p>Add <code>&gt;</code> before any text you want to quote.</p>
+<pre><code class="language-markdown">&gt; **Fusion Drive** combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.</code></pre>
+<p>Renders to:</p>
+<blockquote>
+<p><strong>Fusion Drive</strong> combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.</p>
+</blockquote>
+<p>and this HTML:</p>
+<pre><code class="language-html">&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Fusion Drive&lt;/strong&gt; combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+<p>Blockquotes can also be nested:</p>
+<pre><code class="language-markdown">&gt; Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
+Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
+&gt;&gt; Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</code></pre>
+<p>Renders to:</p>
+<blockquote>
+<p>Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
+Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.</p>
+<blockquote>
+<p>Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</p>
+</blockquote>
+</blockquote>
+<p><br>
+<br>
+<br></p>
+<h2>Notices</h2>
+<p>We have four notice styles and they extend the standard markdown syntax for block quotes.  Basically levels of 3 block quote or greater produce notices in 4 colors:</p>
+<h3>Yellow</h3>
+<pre><code class="language-markdown">&gt;&gt;&gt; Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</code></pre>
+<p>Renders to:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3>Red</h3>
+<pre><code class="language-markdown">&gt;&gt;&gt;&gt; Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</code></pre>
+<p>Renders to:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3>Blue</h3>
+<pre><code class="language-markdown">&gt;&gt;&gt;&gt;&gt; Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</code></pre>
+<p>Renders to:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3>Green</h3>
+<pre><code class="language-markdown">&gt;&gt;&gt;&gt;&gt;&gt; Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</code></pre>
+<p>Renders to:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><br>
+<br>
+<br></p>
+<h2>Lists</h2>
+<h3>Unordered</h3>
+<p>A list of items in which the order of the items does not explicitly matter.</p>
+<p>You may use any of the following symbols to denote bullets for each list item:</p>
+<pre><code class="language-markdown">* valid bullet
+- valid bullet
++ valid bullet</code></pre>
+<p>For example</p>
+<pre><code class="language-markdown">+ Lorem ipsum dolor sit amet
++ Consectetur adipiscing elit
++ Integer molestie lorem at massa
++ Facilisis in pretium nisl aliquet
++ Nulla volutpat aliquam velit
+  - Phasellus iaculis neque
+  - Purus sodales ultricies
+  - Vestibulum laoreet porttitor sem
+  - Ac tristique libero volutpat at
++ Faucibus porta lacus fringilla vel
++ Aenean sit amet erat nunc
++ Eget porttitor lorem</code></pre>
+<p>Renders to:</p>
+<ul>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit
+<ul>
+<li>Phasellus iaculis neque</li>
+<li>Purus sodales ultricies</li>
+<li>Vestibulum laoreet porttitor sem</li>
+<li>Ac tristique libero volutpat at</li>
+</ul></li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ul>
+<p>And this HTML</p>
+<pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+  &lt;li&gt;Integer molestie lorem at massa&lt;/li&gt;
+  &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
+  &lt;li&gt;Nulla volutpat aliquam velit
+    &lt;ul&gt;
+      &lt;li&gt;Phasellus iaculis neque&lt;/li&gt;
+      &lt;li&gt;Purus sodales ultricies&lt;/li&gt;
+      &lt;li&gt;Vestibulum laoreet porttitor sem&lt;/li&gt;
+      &lt;li&gt;Ac tristique libero volutpat at&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Faucibus porta lacus fringilla vel&lt;/li&gt;
+  &lt;li&gt;Aenean sit amet erat nunc&lt;/li&gt;
+  &lt;li&gt;Eget porttitor lorem&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<h3>Ordered</h3>
+<p>A list of items in which the order of items does explicitly matter.</p>
+<pre><code class="language-markdown">1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+4. Facilisis in pretium nisl aliquet
+5. Nulla volutpat aliquam velit
+6. Faucibus porta lacus fringilla vel
+7. Aenean sit amet erat nunc
+8. Eget porttitor lorem</code></pre>
+<p>Renders to:</p>
+<ol>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ol>
+<p>And this HTML:</p>
+<pre><code class="language-html">&lt;ol&gt;
+  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+  &lt;li&gt;Integer molestie lorem at massa&lt;/li&gt;
+  &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
+  &lt;li&gt;Nulla volutpat aliquam velit&lt;/li&gt;
+  &lt;li&gt;Faucibus porta lacus fringilla vel&lt;/li&gt;
+  &lt;li&gt;Aenean sit amet erat nunc&lt;/li&gt;
+  &lt;li&gt;Eget porttitor lorem&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+<p><strong>TIP</strong>: If you just use <code>1.</code> for each number, Markdown will automatically number each item. For example:</p>
+<pre><code class="language-markdown">1. Lorem ipsum dolor sit amet
+1. Consectetur adipiscing elit
+1. Integer molestie lorem at massa
+1. Facilisis in pretium nisl aliquet
+1. Nulla volutpat aliquam velit
+1. Faucibus porta lacus fringilla vel
+1. Aenean sit amet erat nunc
+1. Eget porttitor lorem</code></pre>
+<p>Renders to:</p>
+<ol>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ol>
+<p><br>
+<br>
+<br></p>
+<h2>Code</h2>
+<h3>Inline code</h3>
+<p>Wrap inline snippets of code with <code>`</code>.</p>
+<pre><code class="language-markdown">In this example, `&lt;section&gt;&lt;/section&gt;` should be wrapped as **code**.</code></pre>
+<p>Renders to:</p>
+<p>In this example, <code>&lt;section&gt;&lt;/section&gt;</code> should be wrapped with <strong>code</strong>.</p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;p&gt;In this example, &lt;code&gt;&amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;&lt;/code&gt; should be wrapped with &lt;strong&gt;code&lt;/strong&gt;.&lt;/p&gt;</code></pre>
+<h3>Indented code</h3>
+<p>Or indent several lines of code by at least four spaces, as in:</p>
+<pre>
+  // Some comments
+  line 1 of code
+  line 2 of code
+  line 3 of code
+</pre>
+<p>Renders to:</p>
+<pre><code>// Some comments
+line 1 of code
+line 2 of code
+line 3 of code</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;pre&gt;
+  &lt;code&gt;
+    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+  &lt;/code&gt;
+&lt;/pre&gt;</code></pre>
+<h3>Block code "fences"</h3>
+<p>Use "fences"  <code>```</code> to block in multiple lines of code.</p>
+<pre>
+``` markup
+Sample text here...
+```
+</pre>
+<pre><code>Sample text here...</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;pre&gt;
+  &lt;code&gt;Sample text here...&lt;/code&gt;
+&lt;/pre&gt;</code></pre>
+<h3>Syntax highlighting</h3>
+<p>GFM, or "GitHub Flavored Markdown" also supports syntax highlighting. To activate it, simply add the file extension of the language you want to use directly after the first code "fence", <code>```js</code>, and syntax highlighting will automatically be applied in the rendered HTML. For example, to apply syntax highlighting to JavaScript code:</p>
+<pre>
+```js
+grunt.initConfig({
+  assemble: {
+    options: {
+      assets: 'docs/assets',
+      data: 'src/data/*.{json,yml}',
+      helpers: 'src/custom-helpers.js',
+      partials: ['src/partials/**/*.{hbs,md}']
+    },
+    pages: {
+      options: {
+        layout: 'default.hbs'
+      },
+      files: {
+        './': ['src/templates/pages/index.hbs']
+      }
+    }
+  }
+};
+```
+</pre>
+<p>Renders to:</p>
+<pre><code class="language-js">grunt.initConfig({
+  assemble: {
+    options: {
+      assets: 'docs/assets',
+      data: 'src/data/*.{json,yml}',
+      helpers: 'src/custom-helpers.js',
+      partials: ['src/partials/**/*.{hbs,md}']
+    },
+    pages: {
+      options: {
+        layout: 'default.hbs'
+      },
+      files: {
+        './': ['src/templates/pages/index.hbs']
+      }
+    }
+  }
+};</code></pre>
+<p><br>
+<br>
+<br></p>
+<h2>Tables</h2>
+<p>Tables are created by adding pipes as dividers between each cell, and by adding a line of dashes (also separated by bars) beneath the header. Note that the pipes do not need to be vertically aligned.</p>
+<pre><code class="language-markdown">| Option | Description |
+| ------ | ----------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |</code></pre>
+<p>Renders to:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>path to data files to supply the data that will be passed into templates.</td>
+</tr>
+<tr>
+<td>engine</td>
+<td>engine to be used for processing templates. Handlebars is the default.</td>
+</tr>
+<tr>
+<td>ext</td>
+<td>extension to be used for dest files.</td>
+</tr>
+</tbody>
+</table>
+<p>And this HTML:</p>
+<pre><code class="language-html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Option&lt;/th&gt;
+    &lt;th&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;data&lt;/td&gt;
+    &lt;td&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;engine&lt;/td&gt;
+    &lt;td&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;ext&lt;/td&gt;
+    &lt;td&gt;extension to be used for dest files.&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+<h3>Right aligned text</h3>
+<p>Adding a colon on the right side of the dashes below any heading will right align text for that column.</p>
+<pre><code class="language-markdown">| Option | Description |
+| ------:| -----------:|
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Option</th>
+<th style="text-align: right;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">data</td>
+<td style="text-align: right;">path to data files to supply the data that will be passed into templates.</td>
+</tr>
+<tr>
+<td style="text-align: right;">engine</td>
+<td style="text-align: right;">engine to be used for processing templates. Handlebars is the default.</td>
+</tr>
+<tr>
+<td style="text-align: right;">ext</td>
+<td style="text-align: right;">extension to be used for dest files.</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br>
+<br></p>
+<h2>Links</h2>
+<h3>Basic link</h3>
+<pre><code class="language-markdown">[Assemble](http://assemble.io)</code></pre>
+<p>Renders to (hover over the link, there is no tooltip):</p>
+<p><a href="http://assemble.io">Assemble</a></p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;a href="http://assemble.io"&gt;Assemble&lt;/a&gt;</code></pre>
+<h3>Add a title</h3>
+<pre><code class="language-markdown">[Upstage](https://github.com/upstage/ "Visit Upstage!")</code></pre>
+<p>Renders to (hover over the link, there should be a tooltip):</p>
+<p><a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a></p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;a href="https://github.com/upstage/" title="Visit Upstage!"&gt;Upstage&lt;/a&gt;</code></pre>
+<h3>Named Anchors</h3>
+<p>Named anchors enable you to jump to the specified anchor point on the same page. For example, each of these chapters:</p>
+<pre><code class="language-markdown"># Table of Contents
+  * [Chapter 1](#chapter-1)
+  * [Chapter 2](#chapter-2)
+  * [Chapter 3](#chapter-3)</code></pre>
+<p>will jump to these sections:</p>
+<pre><code class="language-markdown">## Chapter 1 &lt;a id="chapter-1"&gt;&lt;/a&gt;
+Content for chapter one.
+
+## Chapter 2 &lt;a id="chapter-2"&gt;&lt;/a&gt;
+Content for chapter one.
+
+## Chapter 3 &lt;a id="chapter-3"&gt;&lt;/a&gt;
+Content for chapter one.</code></pre>
+<p><strong>NOTE</strong> that specific placement of the anchor tag seems to be arbitrary. They are placed inline here since it seems to be unobtrusive, and it works.</p>
+<p><br>
+<br>
+<br></p>
+<h2>Images</h2>
+<p>Images have a similar syntax to links but include a preceding exclamation point.</p>
+<pre><code class="language-markdown">![Minion](http://octodex.github.com/images/minion.png)</code></pre>
+<p><img src="http://octodex.github.com/images/minion.png" alt="Minion" /></p>
+<p>or</p>
+<pre><code class="language-markdown">![Alt text](http://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")</code></pre>
+<p><img src="http://octodex.github.com/images/stormtroopocat.jpg" alt="Alt text" title="The Stormtroopocat" /></p>
+<p>Like links, Images also have a footnote style syntax</p>
+<pre><code class="language-markdown">![Alt text][id]</code></pre>
+<p><img src="http://octodex.github.com/images/dojocat.jpg" alt="Alt text" title="The Dojocat" /></p>
+<p>With a reference later in the document defining the URL location:</p>
+<pre><code>[id]: http://octodex.github.com/images/dojocat.jpg  "The Dojocat"</code></pre>
+    </p>
+</div>
+
+                                        
+        </div>
+        	<div id="navigation">
+		    <a class="nav nav-prev" href="../index.html"> <i class="fa fa-chevron-left"></i></a>
+	
+		    <a class="nav nav-next" href="../themes.html"><i class="fa fa-chevron-right"></i></a>
+		</div>
+    </section>
+    
+                
+            <script src="../user/plugins/simplesearch/js/simplesearch.js"></script>
+<script src="../user/plugins/prism-highlight/js/prism.js"></script>
+<script>
+var __prism_nodes = null;
+__prism_nodes = document.querySelectorAll('pre:not([class*="language-"])');
+__prism_nodes.forEach(function(node) { node.classList.add('language-txt'); });
+</script>
+
+     </body>
+</html>

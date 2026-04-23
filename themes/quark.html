@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Quark | JS-Docs</title>
+        <meta name="generator" content="GravCMS" />
+    <meta name="description" content="RTFM Skeleton" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <link rel="alternate" type="application/atom+xml" href="../feed:atom.html" title="Atom Feed" />
+    <link rel="alternate" type="application/rss+xml" href="../feed:rss.html" title="RSS Feed" />
+    <link rel="icon" type="image/png" href="../user/themes/learn2/images/favicon.png">
+
+                                            
+            
+                                                        
+        <link href="../user/themes/learn2/css-compiled/nucleus.css" type="text/css" rel="stylesheet">
+<link href="../user/themes/learn2/css-compiled/theme.css" type="text/css" rel="stylesheet">
+<link href="../user/themes/learn2/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+<link href="../user/plugins/markdown-notices/assets/notices.css" type="text/css" rel="stylesheet">
+<link href="../user/plugins/breadcrumbs/css/breadcrumbs.css" type="text/css" rel="stylesheet">
+<link href="../user/plugins/highlight/css/learn.css" type="text/css" rel="stylesheet">
+<link href="../user/plugins/prism-highlight/css/prism.css" type="text/css" rel="stylesheet">
+<link href="../user/themes/learn2/css/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <script src="../system/assets/jquery/jquery-3.x.min.js"></script>
+<script src="../user/themes/learn2/js/modernizr.custom.71422.js"></script>
+<script src="../user/plugins/anchors/js/anchor.min.js"></script>
+<script src="../user/plugins/highlight/js/highlight.pack.js"></script>
+<script src="../user/themes/learn2/js/featherlight.min.js"></script>
+<script src="../user/themes/learn2/js/clipboard.min.js"></script>
+<script src="../user/themes/learn2/js/jquery.scrollbar.min.js"></script>
+<script src="../user/themes/learn2/js/learn.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+                    anchors.options = {
+                        visible: 'hover',
+                        placement: 'right',
+                        
+                        
+                        truncate: 64
+                    };
+                    anchors.add('#body h2, #body h3, #body h4, #body h5');
+                });
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+
+  
+</head>
+<body class="searchbox-hidden " data-url="/themes/quark">
+        <nav id="sidebar">
+        <div id="header-wrapper">
+            <div id="header">
+                <a id="logo" href="http://127.0.0.1/js-docs"><!--
+<svg id="logo-svg" viewBox="0 0 444 102" style="background-color:#ffffff00" version="1.1"
+	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+	x="0px" y="0px" width="444px" height="80px"
+>
+	<path d="m87.503 53.977h-10.642c-1.616 0-2.93 1.315-2.93 2.936v20.418l-0.21 0.175c-6.263 5.278-14.182 8.18-22.297 8.18-19.144 0-34.719-15.559-34.719-34.685 0-19.128 15.575-34.684 34.719-34.684 7.444 0 14.562 2.353 20.587 6.811 1.169 0.865 2.792 0.746 3.822-0.28l7.588-7.58c0.592-0.588 0.901-1.406 0.853-2.24-0.046-0.834-0.448-1.607-1.104-2.127-9.016-7.1443-20.29-11.076-31.746-11.076-28.246 0.0001-51.228 22.958-51.228 51.176-0.0005 28.219 22.982 51.179 51.228 51.179 14.584 0 28.534-6.273 38.27-17.208 0.479-0.536 0.742-1.227 0.742-1.945v-26.114c0-1.621-1.314-2.936-2.933-2.936z"/>
+	<path d="m443.52 4.529c-0.54-0.8206-1.47-1.3182-2.45-1.3182h-11.58c-1.17 0-2.23 0.6957-2.7 1.7704l-32.65 75.721-33.23-75.738c-0.47-1.0634-1.52-1.7532-2.68-1.7532h-11.62c-1 0-1.92 0.4976-2.46 1.3265-0.55 0.8288-0.64 1.8753-0.23 2.7832l40.25 91.732c0.47 1.068 1.53 1.758 2.69 1.758h14.66c1.17 0 2.23-0.71 2.7-1.775l39.54-91.734c0.39-0.9055 0.3-1.9466-0.24-2.772z"/>
+	<path d="m291.34 4.9642c-0.47-1.0636-1.52-1.7534-2.69-1.7534h-14.65c-1.17 0-2.23 0.6957-2.7 1.7704l-39.54 91.735c-0.39 0.9-0.3 1.946 0.24 2.766 0.54 0.828 1.46 1.328 2.45 1.328h11.58c1.17 0 2.23-0.71 2.7-1.775l32.64-75.723 33.24 75.74c0.47 1.068 1.52 1.758 2.68 1.758h11.63c0.99 0 1.92-0.5 2.45-1.328 0.55-0.831 0.63-1.878 0.24-2.788l-40.27-91.73z"/>
+	<path d="m185.34 67.248l0.64-0.306c11.56-5.583 19.04-17.434 19.04-30.196 0-18.491-15.06-33.535-33.58-33.535l-42.49-0.0002c-1.62 0-2.93 1.3153-2.93 2.933v91.726c0 1.624 1.31 2.94 2.93 2.94h10.64c1.62 0 2.94-1.316 2.94-2.94v-78.17h28.91c9.42 0 17.07 7.645 17.07 17.046 0 7.84-5.33 14.64-12.97 16.53-1.38 0.348-2.75 0.523-4.1 0.523h-10.64c-1.1 0-2.11 0.622-2.61 1.607-0.5 0.984-0.4 2.164 0.25 3.057l30.17 41.143c0.55 0.754 1.43 1.204 2.36 1.204h13.22c1.11 0 2.12-0.63 2.62-1.611 0.5-0.989 0.4-2.172-0.25-3.06l-21.22-28.891z"/>
+</svg>
+-->
+<img src="../user/themes/learn2/images/custom/logo.png"></a>
+                <div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input id="search-by" type="text" placeholder="Search Documentation"
+           data-search-input="/js-docs/search.json/query"/>
+    <span data-search-clear><i class="fa fa-close"></i></span>
+</div>
+            </div>
+        </div>
+        
+
+
+<div class="scrollbar-inner">
+    <div class="highlightable">
+                    <ul class="topics">
+                                
+                                            <li class="dd-item" data-nav-id="/">
+            <a href="../index.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>1. </b>Basics</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/basics/overview">
+            <a href="../basics/overview.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Overview</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item parent" data-nav-id="/themes">
+            <a href="../themes.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>2. </b>Themes</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item active" data-nav-id="/themes/quark">
+            <a href="quark.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Quark</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/themes/quark/typography">
+            <a href="quark/typography.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Typography</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item" data-nav-id="/themes/canvas">
+            <a href="canvas.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Canvas</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item" data-nav-id="/tutorials">
+            <a href="../tutorials.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>3. </b>Tutorials</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/tutorials/gantry ">
+            <a href="../tutorials/gantry&#32;.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Gantry</span>
+            </a>
+                    </li>
+                            <li class="dd-item" data-nav-id="/tutorials/joomla">
+            <a href="../tutorials/joomla.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Joomla</span>
+            </a>
+                    </li>
+                            <li class="dd-item" data-nav-id="/tutorials/lamp">
+            <a href="../tutorials/lamp.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>LAMP Stack</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item" data-nav-id="/apps">
+            <a href="../apps.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>4. </b>Apps</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/apps/flatpak">
+            <a href="../apps/flatpak.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Flatpak</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+    
+                            </ul>
+                <hr />
+
+        <a class="padding" href="quark.html#" data-clear-history-toggle><i
+                    class="fa fa-fw fa-history"></i> Clear History</a><br/>
+
+        <section id="footer">
+            <p>Built with <a href="http://getgrav.org">Grav</a> - The Modern Flat File CMS</p>
+        </section>
+    </div>
+</div>
+    </nav>
+    
+        <section id="body">
+        <div id="overlay"></div>
+
+        <div class="padding highlightable">
+            <a href="quark.html#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
+
+                        <div id="top-bar">
+                
+                                
+<div id="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                    <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="../index.html" itemid="/js-docs/">
+                    <span itemprop="name">Basics</span>
+                </a>
+                        <i class="fa fa-angle-right"></i>
+                <meta itemprop="position" content="1" />
+    </span>
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                    <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="../themes.html" itemid="/js-docs/themes">
+                    <span itemprop="name">Themes</span>
+                </a>
+                        <i class="fa fa-angle-right"></i>
+                <meta itemprop="position" content="2" />
+    </span>
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                    <span itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/js-docs/themes/quark">
+                    <span itemprop="name">Quark</span>
+                </span>
+                            <meta itemprop="position" content="3" />
+    </span>
+    </div>
+                            </div>
+            
+                <div id="body-inner">
+    <h1>Quark</h1>
+    <p>
+    	<h3>Quark Theme</h3>
+<p><strong>Quark</strong> is the new default theme for <a href="http://github.com/getgrav/grav">Grav CMS</a>.  This theme is built with the <a href="https://picturepan2.github.io/spectre/">Spectre.css</a> framework and provides a powerful base for developing your own themes. Quark uses functionality that is only available in Grav 1.4+, as such you cannot run Quark on earlier versions of Grav.</p>
+<h2>Features</h2>
+<ul>
+<li>Lightweight and minimal for optimal performance</li>
+<li>Spectre CSS Framework</li>
+<li>Fully responsive with full-page mobile navigation</li>
+<li>SCSS based CSS source files for easy customization</li>
+<li>Built-in support for on-page navigation</li>
+<li>Multiple page template types</li>
+<li>Fontawesome icon support</li>
+</ul>
+<h3>Supported Page Templates</h3>
+<ul>
+<li>Default view template <code>default.md</code></li>
+<li>Error view template <code>error.md</code></li>
+<li>Blog view template <code>blog.md</code></li>
+<li>Blog item view template <code>item.md</code></li>
+<li>Modular view templates: <code>modular.md</code>
+<ul>
+<li>Features Modular view template <code>features.md</code></li>
+<li>Hero Modular view template <code>hero.md</code></li>
+<li>Text Modular view template <code>text.md</code></li>
+<li>Note: Gallery Modular view template <code>gallery.md</code> only works in concert with premium plugin <a href="https://getgrav.org/premium/lightbox-gallery/docs">Lightbox Gallery</a></li>
+</ul></li>
+</ul>
+<h1>Installation</h1>
+<p>Installing the Quark theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file. </p>
+<p>The theme by itself is useful, but you may have an easier time getting up and running by installing a skeleton. The Quark theme can be found in both the <a href="https://github.com/getgrav/grav-skeleton-onepage-site">One-page</a> and <a href="https://github.com/getgrav/grav-skeleton-blog-site">Blog Site</a> which are self-contained repositories for a complete sites which include: sample content, configuration, theme, and plugins.</p>
+<h2>GPM Installation (Preferred)</h2>
+<p>The simplest way to install this theme is via the <a href="http://learn.getgrav.org/advanced/grav-gpm">Grav Package Manager (GPM)</a> through your system's Terminal (also called the command line).  From the root of your Grav install type:</p>
+<pre><code>bin/gpm install quark</code></pre>
+<p>This will install the Quark theme into your <code>/user/themes</code> directory within Grav. Its files can be found under <code>/your/site/grav/user/themes/quark</code>.</p>
+<h2>Manual Installation</h2>
+<p>To install this theme, just download the zip version of this repository and unzip it under <code>/your/site/grav/user/themes</code>. Then, rename the folder to <code>quark</code>. You can find these files either on <a href="https://github.com/getgrav/grav-theme-quark">GitHub</a> or via <a href="http://getgrav.org/downloads/themes">GetGrav.org</a>.</p>
+<p>You should now have all the theme files under</p>
+<pre><code>/your/site/grav/user/themes/quark</code></pre>
+<h2>Default Options</h2>
+<p>Quark comes with a few default options that can be set site-wide.  These options are:</p>
+<pre><code class="language-yaml">enabled: true                 # Enable the theme
+production-mode: true         # In production mode, only minified CSS is used. When disabled, nested CSS with sourcemaps are enabled
+grid-size: grid-lg            # The max-width of the theme, options include: `grid-xl`, `grid-lg`, and `grid-md`
+header-fixed: true            # Cause the header to be fixed at the top of the browser
+header-animated: true         # Allows the fixed header to resize to a smaller header when scrolled
+header-dark: false            # Inverts the text/logo to work better on dark backgrounds
+header-transparent: false     # Allows the fixed header to be transparent over the page
+sticky-footer: true           # Causes the footer to be sticky at the bottom of the page
+blog-page: '/blog'            # The route to the blog listing page, useful for a blog style layout with sidebar
+custom_logo:                  # A custom logo rather than the default (see below)  
+custom_logo_mobile:           # A custom logo to use for mobile navigation</code></pre>
+<p>To make modifications, you can copy the <code>user/themes/quark/quark.yaml</code> file to <code>user/config/themes/</code> folder and modify, or you can use the admin plugin.</p>
+<blockquote>
+<p>NOTE: Do not modify the <code>user/themes/quark/quark.yaml</code> file directly or your changes will be lost with any updates</p>
+</blockquote>
+<h2>Custom Logos</h2>
+<p>To add a custom logo, you should put the log into the <code>user/themes/quark/images/logo</code> folder.  Standard image formats are support (<code>.png</code>,<code>.jpg</code>, <code>.gif</code>, <code>.svg</code>, etc.).  Then reference the logo via the YAML like so:</p>
+<pre><code class="language-yaml">custom_logo:
+    - name: 'my-logo.png'
+custom_logo_mobile:
+    - name: 'my-mobile-logo.png'    </code></pre>
+<p>Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Quark theme options.</p>
+<h2>Page Overrides</h2>
+<p>Quark has the ability to allow pages to override some of the default options by letting the user set <code>body_classes</code> for any page.  The theme will merge the combination of the defaults with any <code>body_classes</code> set. For example:</p>
+<pre><code class="language-yaml">body_classes: "header-dark header-transparent"</code></pre>
+<p>On a particular page will ensure that page has those options enabled (assuming they are false by default).</p>
+<h2>Hero Options</h2>
+<p>The hero template allows some options to be set in the page frontmatter. This is used by the modular <code>hero</code> as well as the blog and item templates to provide a more dynamic header.</p>
+<pre><code class="language-yaml">hero_classes: text-light title-h1h2 parallax overlay-dark-gradient hero-large
+hero_image: road.jpg
+hero_align: center</code></pre>
+<p>The <code>hero_classes</code> option allows a variety of hero classes to be set dynamically these include:</p>
+<ul>
+<li><code>text-light</code> | <code>text-dark</code> - Controls if the text should be light or dark depending on the content</li>
+<li><code>title-h1h2</code> - Enforced a close matched h1/h2 title pairing</li>
+<li><code>parallax</code> - Enables a CSS-powered parallax effect</li>
+<li><code>overlay-dark-gradient</code> - Displays a transparent gradient which further darkens the underlying image</li>
+<li><code>overlay-light-gradient</code> - Displays a transparent gradient which further lightens the underlying image</li>
+<li><code>overlay-dark</code> - Displays a solid transparent overlay which further darkens the underlying image</li>
+<li><code>overlay-light</code> - Displays a solid transparent overlay which further darkens the underlying image</li>
+<li><code>hero-fullscreen</code> | <code>hero-large</code> | <code>hero-medium</code> | <code>hero-small</code> | <code>hero-tiny</code> - Size of the hero block</li>
+</ul>
+<p>The <code>hero_image</code> should point to an image file in the current page folder.</p>
+<h2>Features Modular Options</h2>
+<p>The features modular template provides the ability to set a class on the features, as well as an array of feature items.  For example:</p>
+<pre><code class="language-yaml">class: offset-box
+features:
+    - header: Crazy Fast
+      text: "Performance is not just an afterthought, we baked it in from the start!"
+      icon: fighter-jet
+    - header: Easy to build
+      text: "Simple text files means Grav is trivial to install, and easy to maintain"
+      icon: database
+    - header: Awesome Technology
+      text: "Grav employs best-in-class technologies such as Twig, Markdown &amp;amp; Yaml"
+      icon: cubes
+    - header: Super Flexible
+      text: "From the ground up, with many plugin hooks, Grav is extremely extensible"
+      icon: object-ungroup
+    - header: Abundant Plugins
+      text: "A vibrant developer community means over 200 themes available to download"
+      icon: puzzle-piece
+    - header: Free / Open Source
+      text: "Grav is an open source project, so you can spend your money on other stuff"
+      icon: money </code></pre>
+<h2>Text Modular Options</h2>
+<p>The text box provides a single option to control if any image found in the page folder should be left or right aligned:</p>
+<pre><code class="language-yaml">image_align: right</code></pre>
+    </p>
+</div>
+
+                                        
+        </div>
+        	<div id="navigation">
+		    <a class="nav nav-prev" href="../themes.html"> <i class="fa fa-chevron-left"></i></a>
+	
+		    <a class="nav nav-next" href="quark/typography.html"><i class="fa fa-chevron-right"></i></a>
+		</div>
+    </section>
+    
+                
+            <script src="../user/plugins/simplesearch/js/simplesearch.js"></script>
+<script src="../user/plugins/prism-highlight/js/prism.js"></script>
+<script>
+var __prism_nodes = null;
+__prism_nodes = document.querySelectorAll('pre:not([class*="language-"])');
+__prism_nodes.forEach(function(node) { node.classList.add('language-txt'); });
+</script>
+
+     </body>
+</html>

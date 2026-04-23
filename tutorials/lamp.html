@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>LAMP Stack | JS-Docs</title>
+        <meta name="generator" content="GravCMS" />
+    <meta name="description" content="RTFM Skeleton" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <link rel="alternate" type="application/atom+xml" href="../feed:atom.html" title="Atom Feed" />
+    <link rel="alternate" type="application/rss+xml" href="../feed:rss.html" title="RSS Feed" />
+    <link rel="icon" type="image/png" href="../user/themes/learn2/images/favicon.png">
+
+                                            
+            
+                                                        
+        <link href="../user/themes/learn2/css-compiled/nucleus.css" type="text/css" rel="stylesheet">
+<link href="../user/themes/learn2/css-compiled/theme.css" type="text/css" rel="stylesheet">
+<link href="../user/themes/learn2/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+<link href="../user/plugins/markdown-notices/assets/notices.css" type="text/css" rel="stylesheet">
+<link href="../user/plugins/breadcrumbs/css/breadcrumbs.css" type="text/css" rel="stylesheet">
+<link href="../user/plugins/highlight/css/learn.css" type="text/css" rel="stylesheet">
+<link href="../user/plugins/prism-highlight/css/prism.css" type="text/css" rel="stylesheet">
+<link href="../user/themes/learn2/css/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <script src="../system/assets/jquery/jquery-3.x.min.js"></script>
+<script src="../user/themes/learn2/js/modernizr.custom.71422.js"></script>
+<script src="../user/plugins/anchors/js/anchor.min.js"></script>
+<script src="../user/plugins/highlight/js/highlight.pack.js"></script>
+<script src="../user/themes/learn2/js/featherlight.min.js"></script>
+<script src="../user/themes/learn2/js/clipboard.min.js"></script>
+<script src="../user/themes/learn2/js/jquery.scrollbar.min.js"></script>
+<script src="../user/themes/learn2/js/learn.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+                    anchors.options = {
+                        visible: 'hover',
+                        placement: 'right',
+                        
+                        
+                        truncate: 64
+                    };
+                    anchors.add('#body h2, #body h3, #body h4, #body h5');
+                });
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+
+  
+</head>
+<body class="searchbox-hidden " data-url="/tutorials/lamp">
+        <nav id="sidebar">
+        <div id="header-wrapper">
+            <div id="header">
+                <a id="logo" href="http://127.0.0.1/js-docs"><!--
+<svg id="logo-svg" viewBox="0 0 444 102" style="background-color:#ffffff00" version="1.1"
+	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+	x="0px" y="0px" width="444px" height="80px"
+>
+	<path d="m87.503 53.977h-10.642c-1.616 0-2.93 1.315-2.93 2.936v20.418l-0.21 0.175c-6.263 5.278-14.182 8.18-22.297 8.18-19.144 0-34.719-15.559-34.719-34.685 0-19.128 15.575-34.684 34.719-34.684 7.444 0 14.562 2.353 20.587 6.811 1.169 0.865 2.792 0.746 3.822-0.28l7.588-7.58c0.592-0.588 0.901-1.406 0.853-2.24-0.046-0.834-0.448-1.607-1.104-2.127-9.016-7.1443-20.29-11.076-31.746-11.076-28.246 0.0001-51.228 22.958-51.228 51.176-0.0005 28.219 22.982 51.179 51.228 51.179 14.584 0 28.534-6.273 38.27-17.208 0.479-0.536 0.742-1.227 0.742-1.945v-26.114c0-1.621-1.314-2.936-2.933-2.936z"/>
+	<path d="m443.52 4.529c-0.54-0.8206-1.47-1.3182-2.45-1.3182h-11.58c-1.17 0-2.23 0.6957-2.7 1.7704l-32.65 75.721-33.23-75.738c-0.47-1.0634-1.52-1.7532-2.68-1.7532h-11.62c-1 0-1.92 0.4976-2.46 1.3265-0.55 0.8288-0.64 1.8753-0.23 2.7832l40.25 91.732c0.47 1.068 1.53 1.758 2.69 1.758h14.66c1.17 0 2.23-0.71 2.7-1.775l39.54-91.734c0.39-0.9055 0.3-1.9466-0.24-2.772z"/>
+	<path d="m291.34 4.9642c-0.47-1.0636-1.52-1.7534-2.69-1.7534h-14.65c-1.17 0-2.23 0.6957-2.7 1.7704l-39.54 91.735c-0.39 0.9-0.3 1.946 0.24 2.766 0.54 0.828 1.46 1.328 2.45 1.328h11.58c1.17 0 2.23-0.71 2.7-1.775l32.64-75.723 33.24 75.74c0.47 1.068 1.52 1.758 2.68 1.758h11.63c0.99 0 1.92-0.5 2.45-1.328 0.55-0.831 0.63-1.878 0.24-2.788l-40.27-91.73z"/>
+	<path d="m185.34 67.248l0.64-0.306c11.56-5.583 19.04-17.434 19.04-30.196 0-18.491-15.06-33.535-33.58-33.535l-42.49-0.0002c-1.62 0-2.93 1.3153-2.93 2.933v91.726c0 1.624 1.31 2.94 2.93 2.94h10.64c1.62 0 2.94-1.316 2.94-2.94v-78.17h28.91c9.42 0 17.07 7.645 17.07 17.046 0 7.84-5.33 14.64-12.97 16.53-1.38 0.348-2.75 0.523-4.1 0.523h-10.64c-1.1 0-2.11 0.622-2.61 1.607-0.5 0.984-0.4 2.164 0.25 3.057l30.17 41.143c0.55 0.754 1.43 1.204 2.36 1.204h13.22c1.11 0 2.12-0.63 2.62-1.611 0.5-0.989 0.4-2.172-0.25-3.06l-21.22-28.891z"/>
+</svg>
+-->
+<img src="../user/themes/learn2/images/custom/logo.png"></a>
+                <div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input id="search-by" type="text" placeholder="Search Documentation"
+           data-search-input="/js-docs/search.json/query"/>
+    <span data-search-clear><i class="fa fa-close"></i></span>
+</div>
+            </div>
+        </div>
+        
+
+
+<div class="scrollbar-inner">
+    <div class="highlightable">
+                    <ul class="topics">
+                                
+                                            <li class="dd-item" data-nav-id="/">
+            <a href="../index.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>1. </b>Basics</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/basics/overview">
+            <a href="../basics/overview.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Overview</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item" data-nav-id="/themes">
+            <a href="../themes.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>2. </b>Themes</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/themes/quark">
+            <a href="../themes/quark.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Quark</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/themes/quark/typography">
+            <a href="../themes/quark/typography.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Typography</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item" data-nav-id="/themes/canvas">
+            <a href="../themes/canvas.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Canvas</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item parent" data-nav-id="/tutorials">
+            <a href="../tutorials.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>3. </b>Tutorials</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/tutorials/gantry ">
+            <a href="gantry&#32;.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Gantry</span>
+            </a>
+                    </li>
+                            <li class="dd-item" data-nav-id="/tutorials/joomla">
+            <a href="joomla.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Joomla</span>
+            </a>
+                    </li>
+                            <li class="dd-item active" data-nav-id="/tutorials/lamp">
+            <a href="lamp.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>LAMP Stack</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item" data-nav-id="/apps">
+            <a href="../apps.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>4. </b>Apps</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/apps/flatpak">
+            <a href="../apps/flatpak.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Flatpak</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+    
+                            </ul>
+                <hr />
+
+        <a class="padding" href="lamp.html#" data-clear-history-toggle><i
+                    class="fa fa-fw fa-history"></i> Clear History</a><br/>
+
+        <section id="footer">
+            <p>Built with <a href="http://getgrav.org">Grav</a> - The Modern Flat File CMS</p>
+        </section>
+    </div>
+</div>
+    </nav>
+    
+        <section id="body">
+        <div id="overlay"></div>
+
+        <div class="padding highlightable">
+            <a href="lamp.html#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
+
+                        <div id="top-bar">
+                
+                                
+<div id="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                    <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="../index.html" itemid="/js-docs/">
+                    <span itemprop="name">Basics</span>
+                </a>
+                        <i class="fa fa-angle-right"></i>
+                <meta itemprop="position" content="1" />
+    </span>
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                    <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="../tutorials.html" itemid="/js-docs/tutorials">
+                    <span itemprop="name">Tutorials</span>
+                </a>
+                        <i class="fa fa-angle-right"></i>
+                <meta itemprop="position" content="2" />
+    </span>
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                    <span itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/js-docs/tutorials/lamp">
+                    <span itemprop="name">LAMP Stack</span>
+                </span>
+                            <meta itemprop="position" content="3" />
+    </span>
+    </div>
+                            </div>
+            
+                <div id="body-inner">
+    <h1>LAMP Stack</h1>
+    <p>
+    	<h1>How to Install Apache, MySQL, PHP (LAMP Stack) on Linux Mint 22.1</h1>
+<p>The LAMP stack (Linux, Apache, MySQL, PHP) is a set of open-source tools used to build and deliver dynamic web applications. Linux serves as the operating system, Apache handles web requests, MySQL manages databases, and PHP processes dynamic content.</p>
+<h3>Install Apache</h3>
+<ol>
+<li>Update the server's package index.
+<pre><code class="language-bash">sudo apt update</code></pre></li>
+<li>Install Apache.
+<pre><code class="language-bash">sudo apt install apache2</code></pre></li>
+<li>Start the Apache service.
+<pre><code class="language-bash">sudo systemctl start apache2</code></pre></li>
+<li>Enable the Apache service to start automatically at boot time.
+<pre><code class="language-bash">sudo systemctl enable apache2</code></pre></li>
+<li>Verify that the service is running.
+<pre><code class="language-bash">sudo systemctl status apache2</code></pre></li>
+<li>Access your domain or server IP using a web browser and verify that the default Apache web page displays.
+<pre><code>http://localhost</code></pre>
+<p>The default Ubuntu Apache web page is there for informational and testing purposes. Below is an example of the Apache default web page for Linux.
+<img alt="apache2 default page" src="../user/pages/03.tutorials/03.lamp/apache2.jpeg" /></p></li>
+</ol>
+<h3>Install MySQL</h3>
+<p>MySQL serves as the database backend in the LAMP stack, but you can replace it with MariaDB if needed. Follow the steps below to install the latest MySQL version using the default APT package manager.</p>
+<ol>
+<li>
+<p>Install the MySQL database server package.</p>
+<pre><code class="language-bash">sudo apt install mysql-server</code></pre>
+</li>
+<li>
+<p>Enable the to start automatically at boot time.</p>
+<pre><code class="language-bash">sudo systemctl enable mysql</code></pre>
+</li>
+<li>
+<p>Start the MySQL service.</p>
+<pre><code class="language-bash">sudo systemctl start mysql</code></pre>
+</li>
+<li>
+<p>When the installation is finished, it’s recommended that you run a security script that comes pre-installed with MySQL. This script will remove some insecure default settings and lock down access to your database system.</p>
+<pre><code class="language-bash">sudo mysql_secure_installation</code></pre>
+<div class="notices red">
+<p><strong>Warning:</strong> As of July 2022, an error will occur when you run the <code>mysql_secure_installation</code> script without some further configuration. The reason is that this script will attempt to set a password for the installation’s root MySQL account but, by default on Ubuntu installations, this account is not configured to connect using a password. Prior to July 2022, this script would silently fail after attempting to set the root account password and continue on with the rest of the prompts. However, as of this writing the script will return the following error after you enter and confirm a password:</p>
+</div>
+<pre><code class="language-bash">Output
+... Failed! Error: SET PASSWORD has no significance for user 'root'@'localhost' as the authentication method used doesn't store authentication data in the MySQL server. Please consider using ALTER USER instead if you want to change authentication parameters.
+New password:</code></pre>
+<div class="notices red">
+<p>This will lead the script into a recursive loop, which you can only exit by closing your terminal window.
+Because the <code>mysql_secure_installation</code> script performs a number of other actions that are useful for keeping your MySQL installation secure, it’s still recommended that you run it before you begin using MySQL to manage your data. To avoid entering this recursive loop, though, you’ll need to first adjust how your root MySQL user authenticates.
+First, open up the MySQL prompt:</p>
+</div>
+<pre><code class="language-bash">sudo mysql</code></pre>
+<div class="notices red">
+<p>Then run the following <code>ALTER USER</code> command to change the root user’s authentication method to one that uses a password. The following example changes the authentication method to <code>mysql_native_password</code>:</p>
+</div>
+<pre><code class="language-sql">ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';</code></pre>
+<div class="notices red">
+<p>After making this change, exit the MySQL prompt:</p>
+</div>
+<pre><code class="language-sql">exit</code></pre>
+<div class="notices red">
+<p>Following that, you can run the mysql_secure_installation script without issue.</p>
+</div>
+</li>
+<li>
+<p>Start the interactive script by running:</p>
+<pre><code class="language-bash">sudo mysql_secure_installation</code></pre>
+<p>This will ask if you want to configure the <code>VALIDATE PASSWORD PLUGIN</code>.</p>
+</li>
+</ol>
+<div class="notices green">
+<p><strong>Note:</strong> Enabling this feature is something of a judgment call. If enabled, passwords which don’t match the specified criteria will be rejected by MySQL with an error. It is safe to leave validation disabled, but you should always use strong, unique passwords for database credentials.</p>
+</div>
+<p>Answer <code>Y</code> for yes, or anything else to continue without enabling.</p>
+<pre><code>VALIDATE PASSWORD PLUGIN can be used to test passwords
+and improve security. It checks the strength of passwords
+and allows users to set only those passwords that are
+secure enough. Would you like to set up the VALIDATE PASSWORD plugin?
+
+Press y|Y for Yes, any other key for No:</code></pre>
+<p>If you answer “yes”, you’ll be asked to select a level of password validation. Keep in mind that if you enter <code>2</code> for the strongest level, you will receive errors when attempting to set any password which does not contain numbers, upper and lowercase letters, and special characters:</p>
+<pre><code>There are three levels of password validation policy:
+
+LOW    Length &gt;= 8
+MEDIUM Length &gt;= 8, numeric, mixed case, and special characters
+STRONG Length &gt;= 8, numeric, mixed case, special characters and dictionary file
+
+Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: 1</code></pre>
+<p>Regardless of whether you chose to set up the <code>VALIDATE PASSWORD PLUGIN</code>, your server will next ask you to select and confirm a password for the MySQL root user. This is not to be confused with the <strong>system root</strong>. The <strong>database root</strong> user is an administrative user with full privileges over the database system. Even though the default authentication method for the MySQL root user doesn’t involve using a password, even when one is set, you should define a strong password here as an additional safety measure.</p>
+<p>If you enabled password validation, you’ll be shown the password strength for the root password you just entered and your server will ask if you want to continue with that password. If you are happy with your current password, enter Y for “yes” at the prompt:</p>
+<pre><code>Estimated strength of the password: 100
+Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : y</code></pre>
+<p>For the rest of the questions, press Y and hit the ENTER key at each prompt. This will remove some anonymous users and the test database, disable remote root logins, and load these new rules so that MySQL immediately respects the changes you have made.</p>
+<p>When you’re finished, test whether you’re able to log in to the MySQL console by typing:</p>
+<pre><code class="language-bash">sudo mysql</code></pre>
+<p>This will connect to the MySQL server as the administrative database user root, which is inferred by the use of sudo when running this command. Below is an example output:</p>
+<pre><code class="language-sql">Output
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.28-0ubuntu4 (Ubuntu)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql&gt;</code></pre>
+<p>To exit the MySQL console, type:</p>
+<pre><code class="language-sql">exit</code></pre>
+<p>Notice that you didn’t need to provide a password to connect as the root user, even though you have defined one when running the <code>mysql_secure_installation</code> script. That is because the default authentication method for the administrative MySQL user is <code>unix_socket</code> instead of <code>password</code>. Even though this might seem like a security concern, it makes the database server more secure because the only users allowed to log in as the root MySQL user are the system users with sudo privileges connecting from the console or through an application running with the same privileges. In practical terms, that means you won’t be able to use the administrative database root user to connect from your PHP application. Setting a password for the root MySQL account works as a safeguard, in case the default authentication method is changed from <code>unix_socket</code> to <code>password</code>.</p>
+<p>For increased security, it’s best to have dedicated user accounts with less expansive privileges set up for every database, especially if you plan on having multiple databases hosted on your server.</p>
+<div class="notices green">
+<p><strong>Note:</strong> There are some older versions of PHP that doesn’t support <code>caching_sha2_password</code>, the default authentication method for MySQL 8. For that reason, when creating database users for PHP applications on MySQL 8, you may need to configure your application to use the <code>mysql_native_password</code> plug-in instead. This tutorial will demonstrate how to do that in Step @@.</p>
+</div>
+<p>Your MySQL server is now installed and secured. Next, you’ll install PHP, the final component in the LAMP stack.</p>
+<h3>Install PHP and extended Modules</h3>
+<p>You have Apache installed to serve your content and MySQL installed to store and manage your data. PHP is the component of our setup that will process code to display dynamic content to the final user. In addition to the <code>php</code> package, you’ll need <code>php-mysql</code>, a PHP module that allows PHP to communicate with MySQL-based databases. You’ll also need <code>libapache2-mod-php</code> to enable Apache to handle PHP files. Core PHP packages will automatically be installed as dependencies.</p>
+<p>To install these packages, run the following commands:</p>
+<ol>
+<li>Import PHP LaunchPAD PPA</li>
+</ol>
+<p>First, you must import the Ondrey Sury Launchpad PPA, which provides the latest PHP packages. To do this, run the following command:</p>
+<pre><code class="language-bash">sudo apt install software-properties-common
+sudo add-apt-repository ppa:ondrej/php</code></pre>
+<ol start="2">
+<li>Update Package List
+<pre><code class="language-bash">sudo apt update</code></pre></li>
+<li>Install PHP 8.3
+<pre><code class="language-bash">sudo apt install php8.3</code></pre></li>
+<li>Install PHP 8.3 and standard extensions.
+<pre><code class="language-bash">sudo apt install php php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath</code></pre></li>
+<li>Once the installation is finished, run the following command to confirm your PHP version:
+<pre><code class="language-bash">php -v</code></pre>
+<pre><code class="language-php">Output
+PHP 8.3.23 (cli) (built: Jul  3 2025 16:11:22) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.3.23, Copyright (c) Zend Technologies
+with Zend OPcache v8.3.23, Copyright (c), by Zend Technologies</code></pre></li>
+</ol>
+    </p>
+</div>
+
+                                        
+        </div>
+        	<div id="navigation">
+		    <a class="nav nav-prev" href="joomla.html"> <i class="fa fa-chevron-left"></i></a>
+	
+		    <a class="nav nav-next" href="../apps.html"><i class="fa fa-chevron-right"></i></a>
+		</div>
+    </section>
+    
+                
+            <script src="../user/plugins/simplesearch/js/simplesearch.js"></script>
+<script src="../user/plugins/prism-highlight/js/prism.js"></script>
+<script>
+var __prism_nodes = null;
+__prism_nodes = document.querySelectorAll('pre:not([class*="language-"])');
+__prism_nodes.forEach(function(node) { node.classList.add('language-txt'); });
+</script>
+
+     </body>
+</html>

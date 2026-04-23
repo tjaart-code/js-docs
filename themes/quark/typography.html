@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Typography | JS-Docs</title>
+        <meta name="generator" content="GravCMS" />
+    <meta name="description" content="RTFM Skeleton" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <link rel="alternate" type="application/atom+xml" href="../../feed:atom.html" title="Atom Feed" />
+    <link rel="alternate" type="application/rss+xml" href="../../feed:rss.html" title="RSS Feed" />
+    <link rel="icon" type="image/png" href="../../user/themes/learn2/images/favicon.png">
+
+                                            
+            
+                                                        
+        <link href="../../user/themes/learn2/css-compiled/nucleus.css" type="text/css" rel="stylesheet">
+<link href="../../user/themes/learn2/css-compiled/theme.css" type="text/css" rel="stylesheet">
+<link href="../../user/themes/learn2/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+<link href="../../user/plugins/markdown-notices/assets/notices.css" type="text/css" rel="stylesheet">
+<link href="../../user/plugins/breadcrumbs/css/breadcrumbs.css" type="text/css" rel="stylesheet">
+<link href="../../user/plugins/highlight/css/learn.css" type="text/css" rel="stylesheet">
+<link href="../../user/plugins/prism-highlight/css/prism.css" type="text/css" rel="stylesheet">
+<link href="../../user/themes/learn2/css/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <script src="../../system/assets/jquery/jquery-3.x.min.js"></script>
+<script src="../../user/themes/learn2/js/modernizr.custom.71422.js"></script>
+<script src="../../user/plugins/anchors/js/anchor.min.js"></script>
+<script src="../../user/plugins/highlight/js/highlight.pack.js"></script>
+<script src="../../user/themes/learn2/js/featherlight.min.js"></script>
+<script src="../../user/themes/learn2/js/clipboard.min.js"></script>
+<script src="../../user/themes/learn2/js/jquery.scrollbar.min.js"></script>
+<script src="../../user/themes/learn2/js/learn.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+                    anchors.options = {
+                        visible: 'hover',
+                        placement: 'right',
+                        
+                        
+                        truncate: 64
+                    };
+                    anchors.add('#body h2, #body h3, #body h4, #body h5');
+                });
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+
+  
+</head>
+<body class="searchbox-hidden " data-url="/themes/quark/typography">
+        <nav id="sidebar">
+        <div id="header-wrapper">
+            <div id="header">
+                <a id="logo" href="http://127.0.0.1/js-docs"><!--
+<svg id="logo-svg" viewBox="0 0 444 102" style="background-color:#ffffff00" version="1.1"
+	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+	x="0px" y="0px" width="444px" height="80px"
+>
+	<path d="m87.503 53.977h-10.642c-1.616 0-2.93 1.315-2.93 2.936v20.418l-0.21 0.175c-6.263 5.278-14.182 8.18-22.297 8.18-19.144 0-34.719-15.559-34.719-34.685 0-19.128 15.575-34.684 34.719-34.684 7.444 0 14.562 2.353 20.587 6.811 1.169 0.865 2.792 0.746 3.822-0.28l7.588-7.58c0.592-0.588 0.901-1.406 0.853-2.24-0.046-0.834-0.448-1.607-1.104-2.127-9.016-7.1443-20.29-11.076-31.746-11.076-28.246 0.0001-51.228 22.958-51.228 51.176-0.0005 28.219 22.982 51.179 51.228 51.179 14.584 0 28.534-6.273 38.27-17.208 0.479-0.536 0.742-1.227 0.742-1.945v-26.114c0-1.621-1.314-2.936-2.933-2.936z"/>
+	<path d="m443.52 4.529c-0.54-0.8206-1.47-1.3182-2.45-1.3182h-11.58c-1.17 0-2.23 0.6957-2.7 1.7704l-32.65 75.721-33.23-75.738c-0.47-1.0634-1.52-1.7532-2.68-1.7532h-11.62c-1 0-1.92 0.4976-2.46 1.3265-0.55 0.8288-0.64 1.8753-0.23 2.7832l40.25 91.732c0.47 1.068 1.53 1.758 2.69 1.758h14.66c1.17 0 2.23-0.71 2.7-1.775l39.54-91.734c0.39-0.9055 0.3-1.9466-0.24-2.772z"/>
+	<path d="m291.34 4.9642c-0.47-1.0636-1.52-1.7534-2.69-1.7534h-14.65c-1.17 0-2.23 0.6957-2.7 1.7704l-39.54 91.735c-0.39 0.9-0.3 1.946 0.24 2.766 0.54 0.828 1.46 1.328 2.45 1.328h11.58c1.17 0 2.23-0.71 2.7-1.775l32.64-75.723 33.24 75.74c0.47 1.068 1.52 1.758 2.68 1.758h11.63c0.99 0 1.92-0.5 2.45-1.328 0.55-0.831 0.63-1.878 0.24-2.788l-40.27-91.73z"/>
+	<path d="m185.34 67.248l0.64-0.306c11.56-5.583 19.04-17.434 19.04-30.196 0-18.491-15.06-33.535-33.58-33.535l-42.49-0.0002c-1.62 0-2.93 1.3153-2.93 2.933v91.726c0 1.624 1.31 2.94 2.93 2.94h10.64c1.62 0 2.94-1.316 2.94-2.94v-78.17h28.91c9.42 0 17.07 7.645 17.07 17.046 0 7.84-5.33 14.64-12.97 16.53-1.38 0.348-2.75 0.523-4.1 0.523h-10.64c-1.1 0-2.11 0.622-2.61 1.607-0.5 0.984-0.4 2.164 0.25 3.057l30.17 41.143c0.55 0.754 1.43 1.204 2.36 1.204h13.22c1.11 0 2.12-0.63 2.62-1.611 0.5-0.989 0.4-2.172-0.25-3.06l-21.22-28.891z"/>
+</svg>
+-->
+<img src="../../user/themes/learn2/images/custom/logo.png"></a>
+                <div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input id="search-by" type="text" placeholder="Search Documentation"
+           data-search-input="/js-docs/search.json/query"/>
+    <span data-search-clear><i class="fa fa-close"></i></span>
+</div>
+            </div>
+        </div>
+        
+
+
+<div class="scrollbar-inner">
+    <div class="highlightable">
+                    <ul class="topics">
+                                
+                                            <li class="dd-item" data-nav-id="/">
+            <a href="../../index.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>1. </b>Basics</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/basics/overview">
+            <a href="../../basics/overview.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Overview</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item parent" data-nav-id="/themes">
+            <a href="../../themes.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>2. </b>Themes</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item parent" data-nav-id="/themes/quark">
+            <a href="../quark.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Quark</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item active" data-nav-id="/themes/quark/typography">
+            <a href="typography.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Typography</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item" data-nav-id="/themes/canvas">
+            <a href="../canvas.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Canvas</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item" data-nav-id="/tutorials">
+            <a href="../../tutorials.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>3. </b>Tutorials</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/tutorials/gantry ">
+            <a href="../../tutorials/gantry&#32;.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Gantry</span>
+            </a>
+                    </li>
+                            <li class="dd-item" data-nav-id="/tutorials/joomla">
+            <a href="../../tutorials/joomla.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Joomla</span>
+            </a>
+                    </li>
+                            <li class="dd-item" data-nav-id="/tutorials/lamp">
+            <a href="../../tutorials/lamp.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>LAMP Stack</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+                            <li class="dd-item" data-nav-id="/apps">
+            <a href="../../apps.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b>4. </b>Apps</span>
+            </a>
+                        <ul>
+                    
+                                            <li class="dd-item" data-nav-id="/apps/flatpak">
+            <a href="../../apps/flatpak.html" >
+                <i class="fa fa-check read-icon"></i>
+                <span><b></b>Flatpak</span>
+            </a>
+                    </li>
+    
+            </ul>
+                    </li>
+    
+                            </ul>
+                <hr />
+
+        <a class="padding" href="typography.html#" data-clear-history-toggle><i
+                    class="fa fa-fw fa-history"></i> Clear History</a><br/>
+
+        <section id="footer">
+            <p>Built with <a href="http://getgrav.org">Grav</a> - The Modern Flat File CMS</p>
+        </section>
+    </div>
+</div>
+    </nav>
+    
+        <section id="body">
+        <div id="overlay"></div>
+
+        <div class="padding highlightable">
+            <a href="typography.html#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
+
+                        <div id="top-bar">
+                
+                                
+<div id="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                    <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="../../index.html" itemid="/js-docs/">
+                    <span itemprop="name">Basics</span>
+                </a>
+                        <i class="fa fa-angle-right"></i>
+                <meta itemprop="position" content="1" />
+    </span>
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                    <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="../../themes.html" itemid="/js-docs/themes">
+                    <span itemprop="name">Themes</span>
+                </a>
+                        <i class="fa fa-angle-right"></i>
+                <meta itemprop="position" content="2" />
+    </span>
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                    <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="../quark.html" itemid="/js-docs/themes/quark">
+                    <span itemprop="name">Quark</span>
+                </a>
+                        <i class="fa fa-angle-right"></i>
+                <meta itemprop="position" content="3" />
+    </span>
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                    <span itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/js-docs/themes/quark/typography">
+                    <span itemprop="name">Typography</span>
+                </span>
+                            <meta itemprop="position" content="4" />
+    </span>
+    </div>
+                            </div>
+            
+                <div id="body-inner">
+    <h1>Typography</h1>
+    <p>
+    	<div class="notices yellow">
+<p>Details on the full capabilities of Spectre.css can be found in the <a href="https://picturepan2.github.io/spectre/elements.html">Official Spectre Documentation</a></p>
+</div>
+<p>The <a href="https://github.com/getgrav/grav-theme-quark">Quark theme</a> is the new default theme for Grav built with <a href="https://picturepan2.github.io/spectre/">Spectre.css</a> the lightweight, responsive and modern CSS framework. Spectre provides  basic styles for typography, elements, and a responsive layout system that utilizes best practices and consistent language design.</p>
+<h3>Headings</h3>
+<h1>H1 Heading <code>40px</code></h1>
+<h2>H2 Heading <code>32px</code></h2>
+<h3>H3 Heading <code>28px</code></h3>
+<h4>H4 Heading <code>24px</code></h4>
+<h5>H5 Heading <code>20px</code></h5>
+<h6>H6 Heading <code>16px</code></h6>
+<pre><code class="language-html"># H1 Heading
+# H1 Heading `40px`&lt;/small&gt;`
+
+&lt;span class="h1"&gt;H1 Heading&lt;/span&gt;</code></pre>
+<h3>Paragraphs</h3>
+<p>Lorem ipsum dolor sit amet, consectetur <a href="typography.html#">adipiscing elit. Praesent risus leo, dictum in vehicula sit amet</a>, feugiat tempus tellus. Duis quis sodales risus. Etiam euismod ornare consequat.</p>
+<p>Climb leg rub face on everything give attitude nap all day for under the bed. Chase mice attack feet but rub face on everything hopped up on goofballs.</p>
+<h3>Markdown Semantic Text Elements</h3>
+<p><strong>Bold</strong> <code>**Bold**</code></p>
+<p><em>Italic</em> <code>_Italic_</code></p>
+<p><del>Deleted</del> <code>~~Deleted~~</code></p>
+<p><code>Inline Code</code> <code>`Inline Code`</code></p>
+<h3>HTML Semantic Text Elements</h3>
+<p><abbr>I18N</abbr> <code>&lt;abbr&gt;</code></p>
+<p><cite>Citation</cite> <code>&lt;cite&gt;</code></p>
+<p><kbd>Ctrl + S</kbd> <code>&lt;kbd&gt;</code></p>
+<p>Text<sup>Superscripted</sup> <code>&lt;sup&gt;</code></p>
+<p>Text<sub>Subscripted</sub> <code>&lt;sub&gt;</code></p>
+<p><u>Underlined</u> <code>&lt;u&gt;</code></p>
+<p><mark>Highlighted</mark> <code>&lt;mark&gt;</code></p>
+<p><time>20:14</time> <code>&lt;time&gt;</code></p>
+<p><var>x = y + 2</var> <code>&lt;var&gt;</code></p>
+<h3>Blockquote</h3>
+<blockquote>
+<p>The advance of technology is based on making it fit in so that you don't really even notice it,
+so it's part of everyday life.</p>
+<p><cite>- Bill Gates</cite></p>
+</blockquote>
+<pre><code class="language-markdown">&gt; The advance of technology is based on making it fit in so that you don't really even notice it,
+&gt; so it's part of everyday life.
+&gt;
+&gt; &lt;cite&gt;- Bill Gates&lt;/cite&gt;</code></pre>
+<h3>Unordered List</h3>
+<ul>
+<li>list item 1</li>
+<li>list item 2
+<ul>
+<li>list item 2.1</li>
+<li>list item 2.2</li>
+<li>list item 2.3</li>
+</ul></li>
+<li>list item 3</li>
+</ul>
+<pre><code class="language-markdown">* list item 1
+* list item 2
+    * list item 2.1
+    * list item 2.2
+    * list item 2.3
+* list item 3</code></pre>
+<h3>Ordered List</h3>
+<ol>
+<li>list item 1</li>
+<li>list item 2
+<ol>
+<li>list item 2.1</li>
+<li>list item 2.2</li>
+<li>list item 2.3</li>
+</ol></li>
+<li>list item 3</li>
+</ol>
+<pre><code class="language-markdown">1. list item 1
+1. list item 2
+    1. list item 2.1
+    1. list item 2.2
+    1. list item 2.3
+1. list item 3</code></pre>
+<h3>Table</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: center;">Genre</th>
+<th style="text-align: right;">Release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">The Shawshank Redemption</td>
+<td style="text-align: center;">Crime, Drama</td>
+<td style="text-align: right;">14 October 1994</td>
+</tr>
+<tr>
+<td style="text-align: left;">The Godfather</td>
+<td style="text-align: center;">Crime, Drama</td>
+<td style="text-align: right;">24 March 1972</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schindler's List</td>
+<td style="text-align: center;">Biography, Drama, History</td>
+<td style="text-align: right;">4 February 1994</td>
+</tr>
+<tr>
+<td style="text-align: left;">Se7en</td>
+<td style="text-align: center;">Crime, Drama, Mystery</td>
+<td style="text-align: right;">22 September 1995</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-markdown">| Name                        | Genre                         | Release date         |
+| :-------------------------- | :---------------------------: | -------------------: |
+| The Shawshank Redemption    | Crime, Drama                  | 14 October 1994      |
+| The Godfather               | Crime, Drama                  | 24 March 1972        |
+| Schindler's List            | Biography, Drama, History     | 4 February 1994      |
+| Se7en                       | Crime, Drama, Mystery         | 22 September 1995    |</code></pre>
+<h3>Notices</h3>
+<p>The notices styles are actually provided by the <code>markdown-notices</code> plugin but are useful enough to include here:</p>
+<div class="notices yellow">
+<p>This is a warning notification</p>
+</div>
+<div class="notices red">
+<p>This is a error notification</p>
+</div>
+<div class="notices blue">
+<p>This is a default notification</p>
+</div>
+<div class="notices green">
+<p>This is a success notification</p>
+</div>
+<pre><code class="language-markdown">! This is a warning notification
+
+!! This is a error notification
+
+!!! This is a default notification
+
+!!!! This is a success notification</code></pre>
+    </p>
+</div>
+
+                                        
+        </div>
+        	<div id="navigation">
+		    <a class="nav nav-prev" href="../quark.html"> <i class="fa fa-chevron-left"></i></a>
+	
+		    <a class="nav nav-next" href="../canvas.html"><i class="fa fa-chevron-right"></i></a>
+		</div>
+    </section>
+    
+                
+            <script src="../../user/plugins/simplesearch/js/simplesearch.js"></script>
+<script src="../../user/plugins/prism-highlight/js/prism.js"></script>
+<script>
+var __prism_nodes = null;
+__prism_nodes = document.querySelectorAll('pre:not([class*="language-"])');
+__prism_nodes.forEach(function(node) { node.classList.add('language-txt'); });
+</script>
+
+     </body>
+</html>
